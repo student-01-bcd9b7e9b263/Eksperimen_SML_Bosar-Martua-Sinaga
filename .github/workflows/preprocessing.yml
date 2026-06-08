@@ -24,8 +24,7 @@ jobs:
           pip install pandas numpy scikit-learn
 
       - name: Run Automation Script
-        run: |
-          python preprocessing/automate_Bosar Martua Sinaga.py
+        run: python preprocessing/automate_Bosar Martua Sinaga.py
 
       - name: Commit and Push Processed Data
         run: |
