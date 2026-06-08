@@ -1,9 +1,0 @@
-name: ISPU_Model_Training
-
-# Menggunakan Docker Environment (Kriteria Skilled & Advance)
-docker_env:
-  image: bon12/ispu-mlproject:latest
-
-entry_points:
-  main:
-    command: "python modelling.py"
