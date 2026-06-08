@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 # Inisialisasi DagsHub (Pastikan username dan repo sesuai)
-dagshub.init(repo_owner='Lathif', repo_name='Eksperimen_SML_Lathif', mlflow=True)
+dagshub.init(repo_owner='sinagabosar16', repo_name='Eksperimen_SML_Bosar-Martua-Sinaga', mlflow=True)
 
 def train_model():
     # Karena dijalankan via MLproject, path data cukup nama filenya saja 
