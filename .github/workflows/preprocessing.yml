@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -33,9 +35,9 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull --rebase origin main
+          git pull origin main
           git add preprocessing/ispu_dki1_preprocessing.csv
           
-          # Commit hanya jika dataset mengalami perubahan setelah diproses
-          git diff --quiet && git diff --staged --quiet || git commit -m "feat(data): update ispu cleaned dataset with interpolation via actions"
-          git push
+
+          git diff --quiet && git diff --staged --quiet || git commit -m "Automasi: Update dataset ISPU bersih"
+          git push origin HEAD:main
