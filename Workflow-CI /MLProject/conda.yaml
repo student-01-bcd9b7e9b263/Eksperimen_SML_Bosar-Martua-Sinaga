@@ -1,0 +1,11 @@
+name: ispu-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pandas
+  - scikit-learn
+  - pip
+  - pip:
+    - mlflow
+    - dagshub
