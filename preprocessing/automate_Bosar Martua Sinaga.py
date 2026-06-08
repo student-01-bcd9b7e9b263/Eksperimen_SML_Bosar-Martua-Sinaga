@@ -55,6 +55,6 @@ def run_preprocessing(input_path, output_path):
 if __name__ == "__main__":
     # Path relatif ini disesuaikan untuk dijalankan dari root GitHub Repository
     INPUT_FILE = "ispu_dki1_raw.csv"
-    OUTPUT_FILE = "preprocessing/ispu_dki_preprocessing.csv"
+    OUTPUT_FILE = "preprocessing/ispu_dki1_preprocessing.csv"
     
     run_preprocessing(INPUT_FILE, OUTPUT_FILE)
