@@ -26,10 +26,10 @@ jobs:
           ls -la
 
           echo "===== WORKFLOW-CI ====="
-          ls -la ./Workflow-CI
+          ls -la ./workflow-ci
 
           echo "===== MLPROJECT ====="
-          ls -la ./Workflow-CI/MLProject
+          ls -la ./workflow-ci/MLProject
 
       # Login Docker Hub
       - name: Log in to Docker Hub
@@ -42,8 +42,8 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: ./Workflow-CI /MLProject
-          file: ./Workflow-CI /MLProject/Dockerfile
+          context: ./workflow-ci/MLProject
+          file: ./workflow-ci/MLProject/Dockerfile
           push: true
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/ispu-mlproject:latest
