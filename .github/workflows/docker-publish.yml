@@ -19,12 +19,16 @@ jobs:
           # Rahasia (Secrets) ini harus Anda seting di pengaturan GitHub repo Anda!
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-
+          
+      - name: Debug Folder Structure
+        run: ls -R
+        
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
           # Folder tempat Dockerfile berada
-          context: ./Workflow-CI/MLProject
+          context: .
+          file: ./Workflow-CI/MLProject/Dockerfile
           push: true
           # Ganti USERNAME_DOCKERHUB_ANDA di bawah ini
           tags: bon12/ispu-mlproject:latest
