@@ -22,11 +22,11 @@ jobs:
         run: |
           pip install mlflow pandas scikit-learn
           # Jika Anda memiliki file requirements, gunakan perintah di bawah ini:
-          # pip install -r Workflow_CI/MLProject/requirements.txt
+          # pip install -r Workflow_CI /MLProject/requirements.txt
 
       - name: Run Modelling (Training Model)
         run: |
-          cd Workflow_CI/MLProject
+          cd Workflow_CI /MLProject
           python modelling.py
         # Langkah ini akan mengeksekusi script Anda untuk melatih model
 
@@ -35,7 +35,7 @@ jobs:
         with:
           name: model-artefak-ispu
           # Sesuaikan 'model_output' dengan nama folder tempat modelling.py menyimpan model MLflow Anda
-          path: Workflow_CI/MLProject/model_output/ 
+          path: Workflow_CI /MLProject/model_output/ 
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
@@ -45,7 +45,7 @@ jobs:
 
       - name: Build Docker Image via MLflow (Syarat Advance)
         run: |
-          cd workflow_CI/MLProject
+          cd workflow_CI /MLProject
           # Perintah ini yang diminta oleh reviewer kelas Anda
           mlflow models build-docker -m model_output -n ${{ secrets.DOCKER_USERNAME }}/ispu-mlproject:latest
 
