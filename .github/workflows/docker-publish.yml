@@ -24,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           # Folder tempat Dockerfile berada
-          context: ./MLProject
+          context: ./Workflow-CI/MLProject
           push: true
           # Ganti USERNAME_DOCKERHUB_ANDA di bawah ini
           tags: bon12/ispu-mlproject:latest
