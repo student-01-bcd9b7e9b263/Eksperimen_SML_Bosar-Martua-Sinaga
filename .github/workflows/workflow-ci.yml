@@ -45,7 +45,7 @@ jobs:
 
       - name: Build Docker Image via MLflow (Syarat Advance)
         run: |
-          cd workflow_CI/MLProject
+          cd Workflow_CI/MLProject
           # Perintah ini yang diminta oleh reviewer kelas Anda
           mlflow models build-docker -m model_output -n ${{ secrets.DOCKER_USERNAME }}/ispu-mlproject:latest
 
